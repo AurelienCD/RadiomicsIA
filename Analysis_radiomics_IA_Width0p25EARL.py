@@ -23,7 +23,7 @@ sns.set_palette(custom_paletteGeneral)
 ##########################
 
 
-df = pad.read_excel('//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/AnalyseRadiomic-EARL_29032021.xlsx', header=0)
+df = pad.read_excel('//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/AnalyseRadiomic-IA_width0p25_29032021.xlsx', header=0)
 df = pad.read_excel('C:/Users/corrau/Documents/Etude IA Radiomics TEP/AnalyseRadiomic-IA_17032021.xlsx', header=0)
 df = pad.read_excel('/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/AnalyseRadiomic-EARL_17032021.xlsx', header=0)
 
@@ -75,7 +75,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df[df.columns[y]], data=df, showfliers = False) 
 	if results[1] < 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Toutes loc/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Toutes loc/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/toutes_loc/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Toutes loc/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df.columns[y] + " la valeur de p concernant la différence entre les deux images est de " + str(results[1]))) #p value 
@@ -91,7 +91,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df[df.columns[y]], data=df, showfliers = False) 
 	if results[1] > 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Toutes loc/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Toutes loc/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/toutes_loc/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Toutes loc/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1]))) #p value 
@@ -120,7 +120,7 @@ for i in range(118):
 	if results[1] < 0.05:
 		figure = ax.get_figure()
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/Figures_Analyse_Stat/liver/t-test__" + str(df.columns[y]), dpi=400)
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Liver/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Liver/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Liver/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_liver.columns[y] + " la valeur de p concernant la différence entre les deux images est de " + str(results[1]))) #p value 
 	figure.clear()
@@ -133,7 +133,7 @@ for i in range(118):
 	if results[1] > 0.05:
 		ax = sns.boxplot(x='Groupe', y=df_liver[df_liver.columns[y]], data=df_liver, showfliers = False) 
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Liver/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Liver/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/Figures_Analyse_Stat/liver/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Liver/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_liver.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1])))
@@ -150,7 +150,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df_Lung[df_Lung.columns[y]], data=df_Lung, showfliers = False) 
 	if results[1] < 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Lung/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Lung/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/lung/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Lung/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_Lung.columns[y] + " la valeur de p concernant la différence entre les deux images est de " + str(results[1]))) #p value 
@@ -164,7 +164,7 @@ for i in range(118):
 	if results[1] > 0.05:
 		ax = sns.boxplot(x='Groupe', y=df_Lung[df_Lung.columns[y]], data=df_Lung, showfliers = False) 
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Lung/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Lung/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/lung/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Lung/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_Lung.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1])))
@@ -181,7 +181,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df_Muscle[df_Muscle.columns[y]], data=df_Muscle, showfliers = False) 
 	if results[1] < 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Muscle/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Muscle/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("//s-grp/grp/RADIOPHY/Personnel/Aurélien Corroyer-Dulmont/Recherche/AI TEP SubtleMedical/article front oncol noise IA/Figures_Analyse_Stat/Muscle/t-test__" + str(df_Muscle.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/muscle/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Muscle/t-test__" + str(df.columns[y]), dpi=400)	
@@ -196,7 +196,7 @@ for i in range(118):
 	if results[1] > 0.05:
 		ax = sns.boxplot(x='Groupe', y=df_Muscle[df_Muscle.columns[y]], data=df_Muscle, showfliers = False) 
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Muscle/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Muscle/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/muscle/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Muscle/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_Muscle.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1])))
@@ -214,7 +214,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df_BloodPool[df_BloodPool.columns[y]], data=df_BloodPool, showfliers = False) 
 	if results[1] < 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/BloodPool/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/BloodPool/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/bloodpool/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/BloodPool/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_BloodPool.columns[y] + " la valeur de p concernant la différence entre les deux images est de " + str(results[1]))) #p value 
@@ -228,7 +228,7 @@ for i in range(118):
 	if results[1] > 0.05:
 		ax = sns.boxplot(x='Groupe', y=df_BloodPool[df_BloodPool.columns[y]], data=df_BloodPool, showfliers = False) 
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/BloodPool/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/BloodPool/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/bloodpool/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/BloodPool/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_BloodPool.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1])))
@@ -246,7 +246,7 @@ for i in range(118):
 	ax = sns.boxplot(x='Groupe', y=df_Lesion[df_Lesion.columns[y]], data=df_Lesion, showfliers = False) 
 	if results[1] < 0.05:
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Lesion/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Lesion/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/lesion/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Lesion/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_Lesion.columns[y] + " la valeur de p concernant la différence entre les deux images est de " + str(results[1]))) #p value 
@@ -260,7 +260,7 @@ for i in range(118):
 	if results[1] > 0.05:
 		ax = sns.boxplot(x='Groupe', y=df_Lesion[df_Lesion.columns[y]], data=df_Lesion, showfliers = False)
 		figure = ax.get_figure()
-		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/EARL___64bins/Figures_Analyse_Stat/Lesion/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
+		figure.savefig("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets de RECHERCHE/Médecine Nucléaire/AI TEP SubtleMedical_Article_Front_Oncol/IA___Width0p25/Figures_Analyse_Stat/Lesion/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("C:/Users/corrau/Documents/Etude IA Radiomics TEP/Figures_ttest_Origin_IA/lesion/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)
 		#figure.savefig("/home/aureliencd/Documents/Baclesse_ACD/IA Radiomics/Figures_Analyse_Stat/Lesion/PAS SIGNIFICATIF/t-test__" + str(df.columns[y]), dpi=400)	
 		print("Pour la variable " + str(df_Lesion.columns[y] + " la valeur de p est supérieur à 0.05, et est égale à : " + str(results[1])))
