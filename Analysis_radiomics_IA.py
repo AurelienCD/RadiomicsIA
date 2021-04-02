@@ -28,8 +28,6 @@ df = pad.read_excel("//s-grp/grp/RADIOPHY/NOUVELLE ARBORESENCE/Imagerie/Projets 
 
 
 
-
-
 ### To get the values for each location ###
 df_liver = df[df[" labels "] == "Liver"]
 df_Lung = df[df[" labels "] == "Lung"]
@@ -263,15 +261,15 @@ def saveCCCRadiomic(CCC, Featurs):
 			custom_palette[q] = sns.xkcd_rgb["pale red"]
 		else:
 			custom_palette[q] = sns.xkcd_rgb["windows blue"]
-	plt.figure(figsize=(5,25))
+	plt.figure(figsize=(5,42))
 	plt.axvline(0.85, 0,1, linewidth=3, color='b')
 	ax = sns.barplot(x=CCC, y=Featurs, palette=custom_palette)
 	ax.set(xlabel="CCC ")
 	plt.show()
 
-saveCCCRadiomicClass(CCCLesion, FeatursLesion)
-saveCCCRadiomicClass(CCCLung, FeatursLung)
-saveCCCRadiomicClass(CCCLiver, FeatursLiver)
+saveCCCRadiomic(CCCLesion, FeatursLesion)
+saveCCCRadiomic(CCCLung, FeatursLung)
+saveCCCRadiomic(CCCLiver, FeatursLiver)
 
 
 
